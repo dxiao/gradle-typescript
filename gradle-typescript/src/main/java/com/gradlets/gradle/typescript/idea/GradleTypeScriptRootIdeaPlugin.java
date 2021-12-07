@@ -93,7 +93,7 @@ public final class GradleTypeScriptRootIdeaPlugin implements Plugin<Project> {
             return;
         }
         createOrUpdateIdeaXmlFile(
-                project.file(".idea/typescript-compiler.xml"),
+                project.file(".idea/compiler.xml"),
                 node -> ConfigureGradleTypeScriptXml.configureTypeScriptCompiler(
                         node, tscLocationFromSubprojects(project)));
     }
