@@ -101,8 +101,7 @@ public final class GradleTypeScriptRootIdeaPlugin implements Plugin<Project> {
     private static void createOrUpdateIdeaXmlFile(File configurationFile, Consumer<Element> configure) {
         DocumentBuilder dBuilder;
         try {
-            DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
-            dBuilder = dbFactory.newDocumentBuilder();
+            dBuilder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
         } catch (ParserConfigurationException e) {
             throw new RuntimeException("Unable to build xml parser");
         }
